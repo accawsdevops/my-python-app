@@ -11,8 +11,6 @@ phases:
     commands:
       - echo Building the application...
       - python app.py
-      - echo Zipping output...
-      - zip -r output.zip .  # Zips everything in the current directory
 artifacts:
   files:
     - '**/*'

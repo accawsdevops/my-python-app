@@ -6,10 +6,14 @@ phases:
       python: 3.x
     commands:
       - echo Installing dependencies...
+      - pip install -r requirements.txt
   build:
     commands:
       - echo Building the application...
       - python app.py
+      - echo Zipping output...
+      - zip -r output.zip .  # Zips everything in the current directory
 artifacts:
   files:
     - '**/*'
+  base-directory: '.'  # Specify where the files are located before zipping
